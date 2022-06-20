@@ -12,7 +12,8 @@ app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './public/views'));
-console.log(siteData);
+
+
 app.get('/', (req, res) => {
     res.render('pages/index', siteData)
    
