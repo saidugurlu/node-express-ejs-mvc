@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible"
-		  content="IE=edge" />
-	<meta name="viewport"
-		  content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet"
-		  href="main.css" />
-	<title>Info Site</title>
-</head>
-<body>
-	<h1>Information Site</h1>
-	<nav>
-		<a href="/">welcome</a> |
-		<a href="/nouns">nouns</a> |
-		<a href="/books">books</a> |
-		<a href="/translations">translations</a> |
-		<a href="/landscape-photos">landscape photos</a> |
-		<a href="/jobs">jobs</a>
-	</nav>
+	<% const
+	showActiveClass=(page)=> {
+	 if(page === currentPage) {
+	 return "class=active";
+	 } else {
+	 return '';
+	 }
+	 }
+	 %>
+ 
+	 <head>
+		 <meta charset="UTF-8" />
+		 <meta http-equiv="X-UA-Compatible"
+			   content="IE=edge" />
+		 <meta name="viewport"
+			   content="width=device-width, initial-scale=1.0" />
+		 <link rel="stylesheet"
+			   href="main.css" />
+		 <title>Info Site</title>
+	 </head>
+ 
+	 <body>
+		 <h1>Information Site</h1>
+		 <nav>
+			 <a href="/"
+				<%=showActiveClass('welcome')%>>welcome</a> |
+			 <a href="/nouns"
+				<%=showActiveClass('nouns')%>>nouns</a> |
+			 <a href="/books"
+				<%=showActiveClass('books')%>>books</a> |
+			 <a href="/translations"
+				<%=showActiveClass('translations')%>>translations</a> |
+			 <a href="/landscape-photos"
+				<%=showActiveClass('landscape-photos')%>>landscape photos</a> |
+			 <a href="/jobs"
+				<%=showActiveClass('jobs')%>>jobs</a>
+		 </nav>
