@@ -1,1 +1,17 @@
- 
+<%- include('../partials/header');
+%>
+<h2><b>Local JSON file: </b>There are <%=books.length%> books.</h2>
+<div class="content">
+   <ul>
+      <% for(const
+         book
+         of
+         books)
+         {
+         %>
+         <li>
+            <%=book.title%>
+         </li>
+         <%}%>
+   </ul>
+</div> 
