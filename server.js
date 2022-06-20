@@ -10,10 +10,17 @@ const port = process.env.PORT || 3007;
 app.use(express.static("public"));
 
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "./public/views"));
+app.set('views', path.join(__dirname, './src/views'));
 
 app.get("/", (req, res) => {
   res.render("pages/index", siteData);
+});
+
+
+
+
+app.get('/nouns', (req, res) => {
+    res.render('pages/nouns', siteData)
 });
 
 app.listen(port, () => {
