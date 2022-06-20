@@ -29,6 +29,10 @@ app.get('/translations', (req, res) => {
 app.get('/landscape-photos', (req, res) => {
   res.render('pages/landscape-photos', siteData)
 });
+
+app.get('/jobs', (req, res) => {
+  res.render('pages/jobs', siteData)
+});
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);
 });
